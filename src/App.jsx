@@ -36,14 +36,14 @@ export default function App() {
 
           <p>A three column layout - An alternative to Datagrid</p>
           <div className="flex mt-2">
-            <div className="w-10 h-40 bg-blue-400 mr-1"></div>
-            <div className="w-20 h-40 bg-blue-400 mr-1"></div>
-            <div className="w-40 h-40 bg-blue-400"></div>
+            <div className="w-10 h-40 bg-blue-500 mr-1"></div>
+            <div className="w-20 h-40 bg-blue-500 mr-1"></div>
+            <div className="w-40 h-40 bg-blue-500"></div>
           </div>
           <div className="carousel w-full mt-4">
             <div id="item1" className="carousel-item w-full">
               <div className="flex justify-center w-full">
-                <div className="card w-96 bg-blue-200">
+                <div className="card w-96 bg-[#eae7e4]">
                   <div className="card-body">
                     <h2 className="card-title">1 - Simple UI</h2>
                     <p>
@@ -57,7 +57,7 @@ export default function App() {
             </div>
             <div id="item2" className="carousel-item w-full">
               <div className="flex justify-center w-full">
-                <div className="card w-96 bg-blue-200">
+                <div className="card w-96 bg-[#eae7e4]">
                   <div className="card-body">
                     <h2 className="card-title">2 - Faster UI</h2>
                     <p>
@@ -72,7 +72,7 @@ export default function App() {
             </div>
             <div id="item3" className="carousel-item w-full">
               <div className="flex justify-center w-full">
-                <div className="card w-96 bg-blue-200">
+                <div className="card w-96 bg-[#eae7e4]">
                   <div className="card-body">
                     <h2 className="card-title">3 - Cost savings.</h2>
                     <p>
@@ -86,7 +86,7 @@ export default function App() {
             </div>
             <div id="item4" className="carousel-item w-full">
               <div className="flex justify-center w-full">
-                <div className="card w-96 bg-blue-200">
+                <div className="card w-96 bg-[#eae7e4]">
                   <div className="card-body">
                     <h2 className="card-title">4 - More code control.</h2>
                     <p>
@@ -100,7 +100,7 @@ export default function App() {
             </div>
             <div id="item5" className="carousel-item w-full">
               <div className="flex justify-center w-full">
-                <div className="card w-96 bg-blue-200">
+                <div className="card w-96 bg-[#eae7e4]">
                   <div className="card-body">
                     <h2 className="card-title">
                       5 - One UI : One shop for all apps.
@@ -160,7 +160,7 @@ export default function App() {
           </div>
           <button
             id="showbtn"
-            className="btn bg-blue-400 mt-10 invisible"
+            className="btn bg-blue-500 mt-10 invisible"
             onClick={() => setShow((prev) => !prev)}
           >
             {show ? 'Back <-' : 'One UI layout->'}

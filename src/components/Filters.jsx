@@ -12,7 +12,7 @@ export default function Filters() {
           <input
             type="checkbox"
             className={`toggle ${
-              snap.filter.includes('All') ? 'bg-blue-400' : ''
+              snap.filter.includes('All') ? 'bg-blue-500' : ''
             }`}
             onChange={() => setFilter('All')}
             checked={snap.filter.includes('All')}
@@ -26,7 +26,7 @@ export default function Filters() {
             <input
               type="checkbox"
               className={`toggle ${
-                snap.filter.includes(item) ? 'bg-blue-400' : ''
+                snap.filter.includes(item) ? 'bg-blue-500' : ''
               }`}
               onChange={() => setFilter(item)}
               checked={snap.filter.includes(item)}

@@ -30,9 +30,9 @@ export default function DataRow({
 
   return (
     <div
-      className={`card border border-slate-300 hover:border-indigo-300 m-2 p-2 h-20 cursor-pointer animate-fade-up duration-150 ${
+      className={`rounded-md border border-slate-300 hover:border-indigo-300 m-2 p-2 h-20 cursor-pointer animate-fade-up duration-150 ${
         snap.selectedRow?.requestId === requestId
-          ? 'bg-blue-400 text-primary-content'
+          ? 'bg-blue-500 text-primary-content'
           : 'bg-base-200'
       }`}
       onClick={onClick}

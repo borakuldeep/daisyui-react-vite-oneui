@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useSnapshot } from 'valtio';
 import { store } from '../store';
+import Comments from './Comments';
 
 const getProgressColor = (status) => {
   return {
@@ -23,10 +24,10 @@ export default function Details() {
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold mb-8">Work Space</h1>
-            <div className="collapse-title bg-blue-400 text-primary-content mb-4">
+            <div className="collapse-title bg-blue-500 text-primary-content mb-4">
               This is work space or details section of a work item.
             </div>
-            <div className="collapse-title bg-blue-400 text-primary-content mb-4">
+            <div className="collapse-title bg-blue-500 text-primary-content mb-4">
               This can show work item details or separate app can be mounted
               here.
             </div>
@@ -147,6 +148,7 @@ export default function Details() {
           </div>
         </div>
       </div>
+      <Comments />
     </div>
   );
 }
