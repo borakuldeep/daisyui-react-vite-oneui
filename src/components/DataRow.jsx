@@ -16,52 +16,59 @@ export default function DataRow({
 }) {
   const snap = useSnapshot(store);
 
-  const getBgColor = (status) => {
+  const getBorderLeftColor = (status) => {
     return {
-      Success: 'bg-green-500',
-      Failed: 'bg-orange-600',
-      Incoming: 'bg-blue-700',
-      Pending: 'bg-accent',
-      Hold: 'bg-warning',
-      Approved: 'bg-success',
-      Rejected: 'bg-error',
+      Success: 'border-l-green-500',
+      Failed: 'border-l-orange-600',
+      Incoming: 'border-l-blue-700',
+      Pending: 'border-l-accent',
+      Hold: 'border-l-warning',
+      Approved: 'border-l-success',
+      Rejected: 'border-l-error',
     }[status];
   };
 
   return (
     <div
-      className={`rounded-md border border-slate-300 hover:border-indigo-300 m-2 p-2 h-20 cursor-pointer animate-fade-up duration-150 ${
+      className={`rounded-md border-l-4 ${getBorderLeftColor(
+        status
+      )} hover:border-2 hover:border-indigo-300 m-2 p-2 h-20 cursor-pointer animate-fade-up duration-150 ${
         snap.selectedRow?.requestId === requestId
           ? 'bg-blue-500 text-primary-content'
           : 'bg-base-200'
       }`}
       onClick={onClick}
     >
-      <div className="flex items-center justify-evenly">
-        <div className="avatar">
-          <div
-            className={`mask mask-squircle w-3 h-3 ${getBgColor(status)}`}
-          ></div>
+      {/* <div className="avatar">
+        <div
+          className={`mask mask-squircle w-3 h-3 ${getBgColor(status)}`}
+        ></div>
+      </div> */}
+      <div className="flex items-center justify-between">
+        <div>
+          <div className="text-sm">
+            Status: <b>{status}</b>
+          </div>
+          <div className="text-sm opacity-50">Request Id: {requestId}</div>
         </div>
         <div>
-          <div className="font-bold">{status}</div>
-          <div className="text-sm opacity-50">{requestId}</div>
+          <div className="text-sm">
+            Field: <b>Field Value</b>
+          </div>
+          <div className="text-sm opacity-50">other info: xyz</div>
         </div>
-        <div>
-          Field 1
-          <br />
-          <span className="badge badge-ghost badge-sm">Info 1</span>
+        <div className="xs:hidden">
+          <div className="text-sm">
+            Field: <b>Field Value</b>
+          </div>
+          <div className="text-sm opacity-50">other info: xyz</div>
         </div>
-        <div>
-          Field 2
-          <br />
-          <span className="badge badge-ghost badge-sm">Info 2</span>
-        </div>
-        <div>
-          Field 3
-          <br />
-          <span className="badge badge-ghost badge-sm">Info 3</span>
-        </div>
+        {/* <div className="xs:hidden">
+          <div className="text-sm">
+            Field: <b>Field Value</b>
+          </div>
+          <div className="text-sm opacity-50">other info: xyz</div>
+        </div> */}
       </div>
     </div>
   );
