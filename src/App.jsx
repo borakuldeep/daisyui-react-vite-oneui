@@ -33,13 +33,19 @@ export default function App() {
           >
             One UI concept
           </h1>
+          <div className="mt-2">
+            <h3>A three column layout - An alternative to Datagrid</h3>
+          </div>
 
-          <p>A three column layout - An alternative to Datagrid</p>
           <div className="flex mt-2">
             <div className="w-10 h-40 bg-blue-500 mr-1"></div>
             <div className="w-20 h-40 bg-blue-500 mr-1"></div>
             <div className="w-40 h-40 bg-blue-500"></div>
           </div>
+          <div className="mt-2">
+            <p>Advantages: </p>
+          </div>
+
           <div className="carousel w-full mt-4">
             <div id="item1" className="carousel-item w-full">
               <div className="flex justify-center w-full">
@@ -102,14 +108,11 @@ export default function App() {
               <div className="flex justify-center w-full">
                 <div className="card w-96 bg-[#eae7e4]">
                   <div className="card-body">
-                    <h2 className="card-title">
-                      5 - One UI : One shop for all apps.
-                    </h2>
+                    <h2 className="card-title">5 - Better Responsiveness.</h2>
                     <p>
-                      The Third column can be used to display other apps,
-                      enabling users to access other apps in same user-work
-                      context (single page), hence truly embracing the concept
-                      of one UI.
+                      Data grids works best with wide desktops and laptops
+                      screens and hard to make responsive. With three column
+                      layouts, it's easier to make it responsive.
                     </p>
                   </div>
                 </div>

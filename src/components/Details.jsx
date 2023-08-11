@@ -25,11 +25,8 @@ export default function Details() {
           <div className="max-w-md">
             <h1 className="text-5xl font-bold mb-8">Work Space</h1>
             <div className="collapse-title bg-blue-500 text-primary-content mb-4">
-              This is work space or details section of a work item.
-            </div>
-            <div className="collapse-title bg-blue-500 text-primary-content mb-4">
-              This can show work item details or separate app can be mounted
-              here.
+              This is work space or details section of a work item. This can
+              show work item details or separate app can be mounted here.
             </div>
           </div>
         </div>
@@ -184,7 +181,25 @@ export default function Details() {
           </div>
         </div>
       </div>
-      <Comments />
+
+      <div className="w-full flex justify-between mb-3 p-2 items-end pl-20 pr-20">
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text">Type comments here</span>
+          </label>
+          <input
+            type="text"
+            placeholder="Type here"
+            className="input input-bordered w-80 max-w-xs"
+          />
+        </div>
+        <div>
+          <button className="btn btn-outline btn-error w-20 mr-4">
+            Reject
+          </button>
+          <button className="btn bg-blue-500 w-25">Approve</button>
+        </div>
+      </div>
     </div>
   );
 }
