@@ -182,24 +182,26 @@ export default function Details() {
         </div>
       </div>
 
-      <div className="w-full flex justify-between mb-3 p-2 items-end pl-20 pr-20">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Type comments here</span>
-          </label>
-          <input
-            type="text"
-            placeholder="Type here"
-            className="input input-bordered w-80 max-w-xs"
-          />
+      {snap.selectedRow.status !== 'Approved' && (
+        <div className="w-full flex justify-between mb-3 p-2 items-end pl-20 pr-20">
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Type comments here</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Type here"
+              className="input input-bordered w-80 max-w-xs"
+            />
+          </div>
+          <div>
+            <button className="btn btn-outline btn-error w-20 mr-4">
+              Reject
+            </button>
+            <button className="btn bg-blue-500 w-25">Approve</button>
+          </div>
         </div>
-        <div>
-          <button className="btn btn-outline btn-error w-20 mr-4">
-            Reject
-          </button>
-          <button className="btn bg-blue-500 w-25">Approve</button>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
