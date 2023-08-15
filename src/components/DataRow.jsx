@@ -32,18 +32,13 @@ export default function DataRow({
     <div
       className={`rounded-md border-l-4 ${getBorderLeftColor(
         status
-      )} hover:border-2 hover:border-indigo-300 m-2 p-2 h-20 cursor-pointer animate-fade-up duration-150 ${
+      )} hover:drop-shadow-lg m-2 p-2 h-20 cursor-pointer animate-fade-up duration-150 ${
         snap.selectedRow?.requestId === requestId
           ? 'bg-blue-500 text-primary-content'
           : 'bg-base-200'
       }`}
       onClick={onClick}
     >
-      {/* <div className="avatar">
-        <div
-          className={`mask mask-squircle w-3 h-3 ${getBgColor(status)}`}
-        ></div>
-      </div> */}
       <div className="flex items-center justify-between">
         <div>
           <div className="text-sm">
